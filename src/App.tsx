@@ -1,13 +1,20 @@
-function App() {
+import MapGL from 'react-map-gl/mapbox';
+
+const TOKEN = import.meta.env.VITE_MAPBOX_TOKEN as string;
+
+export default function App() {
   return (
-    <main className="min-h-screen p-8">
-      <h1 className="text-3xl font-bold">Japanese American Population 2024</h1>
-      <p className="mt-2 text-gray-500">
-        Mapping people of Japanese descent across the US using ACS data. To be
-        donated to JACL and Pacific Citizen.
-      </p>
-    </main>
+    <div className="w-full h-screen">
+      <MapGL
+        mapboxAccessToken={TOKEN}
+        style={{ width: '100%', height: '100%' }}
+        initialViewState={{
+          longitude: -96,
+          latitude: 38,
+          zoom: 3.5,
+        }}
+        mapStyle="mapbox://styles/daigofuji/cmp6zmu4j004f01s818jy6thz"
+      />
+    </div>
   );
 }
-
-export default App;
