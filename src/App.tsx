@@ -1,10 +1,10 @@
-import { useCallback, useRef } from 'react';
-import MapGL, { NavigationControl, ScaleControl } from 'react-map-gl/mapbox';
-import type { MapRef } from 'react-map-gl/mapbox';
-import mapboxgl from 'mapbox-gl';
-import InfoPanel from './InfoPanel';
+import mapboxgl from "mapbox-gl";
+import { useCallback, useRef } from "react";
+import MapGL, { NavigationControl, ScaleControl } from "react-map-gl/mapbox";
+import type { MapRef } from "react-map-gl/mapbox";
+import InfoPanel from "./InfoPanel";
 
-const LAYER = 'counties-japanese';
+const LAYER = "counties-japanese";
 const TOKEN = import.meta.env.VITE_MAPBOX_TOKEN as string;
 
 export default function App() {
@@ -14,14 +14,23 @@ export default function App() {
     const map = mapRef.current?.getMap();
     if (!map) return;
 
-    const popup = new mapboxgl.Popup({ closeButton: true, anchor: 'bottom', focusAfterOpen: false });
+    const popup = new mapboxgl.Popup({
+      closeButton: true,
+      anchor: "bottom",
+      focusAfterOpen: false,
+    });
 
-    map.on('click', LAYER, (e) => {
+    map.on("click", LAYER, (e) => {
       const feature = e.features?.[0];
       if (!feature) return;
-      const { name, state, japanese_pop, japanese_pct, total_pop } = feature.properties as {
-        name: string; state: string; japanese_pop: number; japanese_pct: number; total_pop: number;
-      };
+      const { name, state, japanese_pop, japanese_pct, total_pop } =
+        feature.properties as {
+          name: string;
+          state: string;
+          japanese_pop: number;
+          japanese_pct: number;
+          total_pop: number;
+        };
       popup
         .setLngLat(e.lngLat)
         .setHTML(`
@@ -35,8 +44,12 @@ export default function App() {
         .addTo(map);
     });
 
-    map.on('mouseenter', LAYER, () => { map.getCanvas().style.cursor = 'pointer'; });
-    map.on('mouseleave', LAYER, () => { map.getCanvas().style.cursor = ''; });
+    map.on("mouseenter", LAYER, () => {
+      map.getCanvas().style.cursor = "pointer";
+    });
+    map.on("mouseleave", LAYER, () => {
+      map.getCanvas().style.cursor = "";
+    });
   }, []);
 
   return (
@@ -44,14 +57,14 @@ export default function App() {
       <MapGL
         ref={mapRef}
         mapboxAccessToken={TOKEN}
-        style={{ width: '100%', height: '100%' }}
+        style={{ width: "100%", height: "100%" }}
         initialViewState={{
           longitude: -96,
           latitude: 38,
           zoom: 4.3,
         }}
-        minZoom={2}
-        maxZoom={12}
+        minZoom={3.5}
+        maxZoom={11}
         mapStyle="mapbox://styles/daigofuji/cmp6zmu4j004f01s818jy6thz"
         onLoad={onLoad}
       >
