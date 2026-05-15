@@ -34,7 +34,7 @@ Total population in the US is 338,156,808 according to the same dataset, so Japa
 
 ### Census variables
 | Variable | Description |
-|---|---|
+| --- | --- |
 | `B02018_004E` | Japanese alone or in combination — "Estimate!!Total Groups Tallied:!!East Asian:!!Japanese" |
 | `B01003_001E` | Total population |
 
@@ -65,7 +65,7 @@ Each feature carries:
 ## Scripts
 
 | Command | What it does |
-|---|---|
+| --- | ---  |
 | `npm run fetch-data` | Pull ACS data, join to geometry, write `counties.geojson` |
 | `npm start` / `npm run dev` | Start dev server |
 | `npm run build` | TypeScript check + Vite build |
@@ -102,7 +102,20 @@ The script reads `scripts/source/us_counties_2024.json`, fetches ACS5 data, join
 
 ## Phase 2 — Map app
 
-- [ ] Full-screen Mapbox dark basemap
+Mapbox free tier gives you:
+
+- 50,000 map loads/month — plenty for a portfolio/JACL donation project
+- 50GB tile requests/month
+- Tileset uploads: up to 300MB per file, 20 uploads/month — counties and tracts both fit easily
+
+mapbox://styles/daigofuji/cmp6zmu4j004f01s818jy6thz has a layer with conty geometries already colored. data layer daigofuji.dzah1uc6 
+
+using colors
+#efedf5
+#bcbddc
+#756bb1
+
+- [ ] Full-screen Mapbox light basemap
 - [ ] Choropleth fill layer on counties by `japanese_pct`
 - [ ] Hover tooltip: county name, `japanese_pop` (formatted), `japanese_pct` as `X.XX%`
 - [ ] Color scale: sequential single warm hue (cream → deep red), 5–7 stops

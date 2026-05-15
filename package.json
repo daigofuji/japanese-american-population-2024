@@ -14,8 +14,10 @@
     "fetch-data": "node scripts/fetch-data.mjs"
   },
   "dependencies": {
+    "mapbox-gl": "^3.23.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-map-gl": "^8.1.1"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
