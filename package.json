@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "lint": "biome check src/",
     "lint:fix": "biome check --write src/",
-    "format": "biome format --write src/"
+    "format": "biome format --write src/",
+    "fetch-data": "node scripts/fetch-data.mjs"
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -18,11 +19,12 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@types/node": "^22.0.0",
     "@tailwindcss/vite": "^4.0.0",
+    "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react-swc": "^3.7.0",
+    "dotenv": "^17.4.2",
     "tailwindcss": "^4.0.0",
     "typescript": "~5.7.2",
     "vite": "^6.0.0"

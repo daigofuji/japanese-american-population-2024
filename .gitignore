@@ -19,5 +19,7 @@ node_modules/
 *.sln
 *.sw?
 
+.DS_Store
+
 # TypeScript build cache
 *.tsbuildinfo
