@@ -2,6 +2,7 @@ import { useCallback, useRef } from 'react';
 import MapGL, { NavigationControl, ScaleControl } from 'react-map-gl/mapbox';
 import type { MapRef } from 'react-map-gl/mapbox';
 import mapboxgl from 'mapbox-gl';
+import InfoPanel from './InfoPanel';
 
 const LAYER = 'counties-japanese';
 const TOKEN = import.meta.env.VITE_MAPBOX_TOKEN as string;
@@ -39,7 +40,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="w-full h-screen">
+    <div className="w-full h-screen relative">
       <MapGL
         ref={mapRef}
         mapboxAccessToken={TOKEN}
@@ -57,6 +58,7 @@ export default function App() {
         <NavigationControl position="top-right" />
         <ScaleControl unit="imperial" position="bottom-right" />
       </MapGL>
+      <InfoPanel />
     </div>
   );
 }
