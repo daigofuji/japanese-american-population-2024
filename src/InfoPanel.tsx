@@ -59,7 +59,8 @@ export default function InfoPanel() {
             </a>
           </p>
           <p className="leading-relaxed text-gray-500">
-            Daigo Fujiwara-Smith for Pacific Citizen/JACL. Originally published May 2026.
+            Daigo Fujiwara-Smith for Pacific Citizen/JACL. Originally published
+            May 2026.
           </p>
         </div>
       )}

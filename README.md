@@ -25,6 +25,8 @@ Census variables pulled from `https://api.census.gov/data/2024/acs/acs5`:
 
 County geometry: Census TIGER 2024 5m cartographic boundary, simplified with [mapshaper](https://mapshaper.org/) to ~3.8MB (`scripts/source/us_counties_2024.json`).
 
+Tiger shape files can be found here: <https://www2.census.gov/geo/tiger/GENZ2024/shp/>
+
 ---
 
 ## Development
