@@ -5,6 +5,8 @@ import type { MapRef } from "react-map-gl/mapbox";
 import InfoPanel from "./InfoPanel";
 
 const LAYER = "counties-japanese";
+const SELECTED_LAYER = "county-selected";
+const NO_MATCH_FILTER: mapboxgl.FilterSpecification = ["==", ["id"], -1];
 const TOKEN = import.meta.env.VITE_MAPBOX_TOKEN as string;
 
 export default function App() {
@@ -13,6 +15,21 @@ export default function App() {
   const onLoad = useCallback(() => {
     const map = mapRef.current?.getMap();
     if (!map) return;
+
+    const styleLayers = map.getStyle().layers;
+    const baseLayerDef = styleLayers.find((l) => l.id === LAYER) as
+      | { source: string; "source-layer": string }
+      | undefined;
+    if (baseLayerDef) {
+      map.addLayer({
+        id: SELECTED_LAYER,
+        type: "line",
+        source: baseLayerDef.source,
+        "source-layer": baseLayerDef["source-layer"],
+        paint: { "line-color": "#000000", "line-width": 2.5 },
+        filter: NO_MATCH_FILTER,
+      });
+    }
 
     const popup = new mapboxgl.Popup({
       closeButton: true,
@@ -31,17 +48,28 @@ export default function App() {
           japanese_pct: number;
           total_pop: number;
         };
+      map.setFilter(SELECTED_LAYER, [
+        "all",
+        ["==", ["get", "name"], name],
+        ["==", ["get", "state"], state],
+      ]);
       popup
         .setLngLat(e.lngLat)
         .setHTML(`
           <div class="text-xs">
-            <p class="text-gray-500">${state} | Pop.: ${Number(total_pop).toLocaleString()}</p>
+
             <p class="font-bold text-sm">${name}</p>
+            <p class="text-gray-500">${state} | Pop.: ${Number(total_pop).toLocaleString()}</p>
             <p class="mt-0.5">${Number(japanese_pop).toLocaleString()} Japanese Americans</p>
             <p class="text-gray-400">${Number(japanese_pct).toFixed(2)}% of total population</p>
           </div>
         `)
         .addTo(map);
+    });
+
+    map.on("click", (e) => {
+      const hits = map.queryRenderedFeatures(e.point, { layers: [LAYER] });
+      if (hits.length === 0) map.setFilter(SELECTED_LAYER, NO_MATCH_FILTER);
     });
 
     map.on("mouseenter", LAYER, () => {
