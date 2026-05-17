@@ -130,8 +130,7 @@ async function generateTracts() {
       geometry: feature.geometry,
       properties: {
         geoid,
-        tract: feature.properties.NAME,
-        county: feature.properties.NAMELSADCO,
+        name: `${feature.properties.NAMELSADCO} (${feature.properties.NAME})`,
         state: feature.properties.STATE_NAME,
         japanese_pop,
         total_pop,
@@ -145,9 +144,9 @@ async function generateTracts() {
   console.log('Written → public/data/tracts.geojson')
 
   const csvRows = [
-    'geoid,tract,county,state,japanese_pop,total_pop,japanese_pct',
+    'geoid,name,state,japanese_pop,total_pop,japanese_pct',
     ...features.map(({ properties: p }) =>
-      `${p.geoid},"${p.tract}","${p.county}","${p.state}",${p.japanese_pop},${p.total_pop},${p.japanese_pct}`
+      `${p.geoid},"${p.name}","${p.state}",${p.japanese_pop},${p.total_pop},${p.japanese_pct}`
     ),
   ]
   writeFileSync('public/data/tracts.csv', csvRows.join('\n'))
