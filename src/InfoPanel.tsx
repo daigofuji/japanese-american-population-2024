@@ -62,6 +62,14 @@ export default function InfoPanel() {
             Daigo Fujiwara-Smith for Pacific Citizen/JACL. Originally published
             May 2026.
           </p>
+          <a
+            href="https://login.jacl.org/general/register_member_type.asp"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 block w-full text-center bg-red-700 hover:bg-red-800 text-white text-xs font-semibold uppercase tracking-widest py-2 px-3 transition-colors"
+          >
+            Donate / Join JACL
+          </a>
         </div>
       )}
     </div>

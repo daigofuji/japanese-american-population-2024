@@ -4,10 +4,42 @@ import MapGL, { NavigationControl, ScaleControl } from "react-map-gl/mapbox";
 import type { MapRef } from "react-map-gl/mapbox";
 import InfoPanel from "./InfoPanel";
 
-const LAYER = "counties-japanese";
-const SELECTED_LAYER = "county-selected";
-const NO_MATCH_FILTER: mapboxgl.FilterSpecification = ["==", ["id"], -1];
+const COUNTY_LAYER = "counties-japanese";
+const TRACT_LAYER = "us-tracts-japanese-2024";
+const COUNTY_SELECTED = "county-selected";
+const TRACT_SELECTED = "tract-selected";
+const NO_MATCH: mapboxgl.FilterSpecification = ["==", ["get", "geoid"], ""];
 const TOKEN = import.meta.env.VITE_MAPBOX_TOKEN as string;
+
+type FeatureProps = {
+  geoid: string;
+  name: string;
+  state: string;
+  japanese_pop: number;
+  japanese_pct: number;
+  total_pop: number;
+};
+
+function getStyleLayer(map: mapboxgl.Map, layerId: string) {
+  return map.getStyle().layers.find((l) => l.id === layerId) as
+    | { source: string; "source-layer": string }
+    | undefined;
+}
+
+function safeSetFilter(map: mapboxgl.Map, layerId: string, filter: mapboxgl.FilterSpecification) {
+  if (map.getLayer(layerId)) map.setFilter(layerId, filter);
+}
+
+function popupHTML({ name, state, japanese_pop, japanese_pct, total_pop }: FeatureProps) {
+  return `
+    <div class="text-xs">
+      <p class="font-bold text-sm">${name}</p>
+      <p class="text-gray-500">${state} | Pop.: ${Number(total_pop).toLocaleString()}</p>
+      <p class="mt-0.5">${Number(japanese_pop).toLocaleString()} Japanese Americans</p>
+      <p class="text-gray-400">${Number(japanese_pct).toFixed(2)}% of total population</p>
+    </div>
+  `;
+}
 
 export default function App() {
   const mapRef = useRef<MapRef>(null);
@@ -16,18 +48,23 @@ export default function App() {
     const map = mapRef.current?.getMap();
     if (!map) return;
 
-    const styleLayers = map.getStyle().layers;
-    const baseLayerDef = styleLayers.find((l) => l.id === LAYER) as
-      | { source: string; "source-layer": string }
-      | undefined;
-    if (baseLayerDef) {
+    // Selection outline layers — zoom-matched to their parent layers
+    const selectionLayers: [string, string, number?, number?][] = [
+      [COUNTY_LAYER, COUNTY_SELECTED, undefined, 7],
+      [TRACT_LAYER, TRACT_SELECTED, 7, undefined],
+    ];
+    for (const [parentId, selectedId, minzoom, maxzoom] of selectionLayers) {
+      const base = getStyleLayer(map, parentId);
+      if (!base) continue;
       map.addLayer({
-        id: SELECTED_LAYER,
+        id: selectedId,
         type: "line",
-        source: baseLayerDef.source,
-        "source-layer": baseLayerDef["source-layer"],
+        source: base.source,
+        "source-layer": base["source-layer"],
         paint: { "line-color": "#000000", "line-width": 2.5 },
-        filter: NO_MATCH_FILTER,
+        filter: NO_MATCH,
+        ...(minzoom !== undefined && { minzoom }),
+        ...(maxzoom !== undefined && { maxzoom }),
       });
     }
 
@@ -37,46 +74,41 @@ export default function App() {
       focusAfterOpen: false,
     });
 
-    map.on("click", LAYER, (e) => {
-      const feature = e.features?.[0];
-      if (!feature) return;
-      const { name, state, japanese_pop, japanese_pct, total_pop } =
-        feature.properties as {
-          name: string;
-          state: string;
-          japanese_pop: number;
-          japanese_pct: number;
-          total_pop: number;
-        };
-      map.setFilter(SELECTED_LAYER, [
-        "all",
-        ["==", ["get", "name"], name],
-        ["==", ["get", "state"], state],
-      ]);
-      popup
-        .setLngLat(e.lngLat)
-        .setHTML(`
-          <div class="text-xs">
-
-            <p class="font-bold text-sm">${name}</p>
-            <p class="text-gray-500">${state} | Pop.: ${Number(total_pop).toLocaleString()}</p>
-            <p class="mt-0.5">${Number(japanese_pop).toLocaleString()} Japanese Americans</p>
-            <p class="text-gray-400">${Number(japanese_pct).toFixed(2)}% of total population</p>
-          </div>
-        `)
-        .addTo(map);
+    // Closing the popup (any reason) clears both selection borders
+    popup.on("close", () => {
+      safeSetFilter(map, COUNTY_SELECTED, NO_MATCH);
+      safeSetFilter(map, TRACT_SELECTED, NO_MATCH);
     });
 
+    // Shared click handler for both data layers
+    for (const [layerId, selectedId, otherSelectedId] of [
+      [COUNTY_LAYER, COUNTY_SELECTED, TRACT_SELECTED],
+      [TRACT_LAYER, TRACT_SELECTED, COUNTY_SELECTED],
+    ]) {
+      map.on("click", layerId, (e) => {
+        const feature = e.features?.[0];
+        if (!feature) return;
+        const props = feature.properties as FeatureProps;
+        safeSetFilter(map, selectedId, ["==", ["get", "geoid"], props.geoid]);
+        safeSetFilter(map, otherSelectedId, NO_MATCH);
+        popup.setLngLat(e.lngLat).setHTML(popupHTML(props)).addTo(map);
+      });
+
+      map.on("mouseenter", layerId, () => {
+        map.getCanvas().style.cursor = "pointer";
+      });
+      map.on("mouseleave", layerId, () => {
+        map.getCanvas().style.cursor = "";
+      });
+    }
+
+    // Click outside both layers → close popup (close handler clears selection)
     map.on("click", (e) => {
-      const hits = map.queryRenderedFeatures(e.point, { layers: [LAYER] });
-      if (hits.length === 0) map.setFilter(SELECTED_LAYER, NO_MATCH_FILTER);
-    });
-
-    map.on("mouseenter", LAYER, () => {
-      map.getCanvas().style.cursor = "pointer";
-    });
-    map.on("mouseleave", LAYER, () => {
-      map.getCanvas().style.cursor = "";
+      const activeLayers = [COUNTY_LAYER, TRACT_LAYER].filter((id) => map.getLayer(id));
+      const hits = activeLayers.length
+        ? map.queryRenderedFeatures(e.point, { layers: activeLayers })
+        : [];
+      if (hits.length === 0) popup.remove();
     });
   }, []);
 
