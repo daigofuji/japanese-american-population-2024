@@ -26,11 +26,21 @@ function getStyleLayer(map: mapboxgl.Map, layerId: string) {
     | undefined;
 }
 
-function safeSetFilter(map: mapboxgl.Map, layerId: string, filter: mapboxgl.FilterSpecification) {
+function safeSetFilter(
+  map: mapboxgl.Map,
+  layerId: string,
+  filter: mapboxgl.FilterSpecification,
+) {
   if (map.getLayer(layerId)) map.setFilter(layerId, filter);
 }
 
-function popupHTML({ name, state, japanese_pop, japanese_pct, total_pop }: FeatureProps) {
+function popupHTML({
+  name,
+  state,
+  japanese_pop,
+  japanese_pct,
+  total_pop,
+}: FeatureProps) {
   return `
     <div class="text-xs">
       <p class="font-bold text-sm">${name}</p>
@@ -104,7 +114,9 @@ export default function App() {
 
     // Click outside both layers → close popup (close handler clears selection)
     map.on("click", (e) => {
-      const activeLayers = [COUNTY_LAYER, TRACT_LAYER].filter((id) => map.getLayer(id));
+      const activeLayers = [COUNTY_LAYER, TRACT_LAYER].filter((id) =>
+        map.getLayer(id),
+      );
       const hits = activeLayers.length
         ? map.queryRenderedFeatures(e.point, { layers: activeLayers })
         : [];
