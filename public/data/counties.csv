@@ -1,4 +1,4 @@
-fips,name,state,japanese_pop,total_pop,japanese_pct
+geoid,name,state,japanese_pop,total_pop,japanese_pct
 13101,"Echols County","Georgia",0,3709,0
 18167,"Vigo County","Indiana",90,106109,0.08
 23031,"York County","Maine",292,216731,0.13
@@ -20,7 +20,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 48067,"Cass County","Texas",10,28568,0.04
 51690,"Martinsville city","Virginia",0,13658,0
 51720,"Norton city","Virginia",0,3577,0
-72101,"Morovis Municipio","Puerto Rico",0,28397,0
+72101,"Morovis Municipio","Puerto Rico",0,0,0
 48239,"Jackson County","Texas",0,15152,0
 20077,"Harper County","Kansas",0,5400,0
 01027,"Clay County","Alabama",0,14192,0
@@ -40,7 +40,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 31011,"Boone County","Nebraska",0,5356,0
 50009,"Essex County","Vermont",8,5982,0.13
 55005,"Barron County","Wisconsin",35,46797,0.07
-72075,"Juana Díaz Municipio","Puerto Rico",0,46156,0
+72075,"Juana Díaz Municipio","Puerto Rico",0,0,0
 48191,"Hall County","Texas",0,2820,0
 48211,"Hemphill County","Texas",0,3234,0
 48263,"Kent County","Texas",20,734,2.72
@@ -111,7 +111,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 48139,"Ellis County","Texas",119,213160,0.06
 51840,"Winchester city","Virginia",46,27913,0.16
 55033,"Dunn County","Wisconsin",56,45527,0.12
-72019,"Barranquitas Municipio","Puerto Rico",0,29054,0
+72019,"Barranquitas Municipio","Puerto Rico",0,0,0
 31171,"Thomas County","Nebraska",0,564,0
 04007,"Gila County","Arizona",20,53795,0.04
 21117,"Kenton County","Kentucky",320,171288,0.19
@@ -132,7 +132,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 48309,"McLennan County","Texas",261,266067,0.1
 48367,"Parker County","Texas",119,165168,0.07
 29215,"Texas County","Missouri",44,25161,0.17
-72091,"Manatí Municipio","Puerto Rico",0,38943,0
+72091,"Manatí Municipio","Puerto Rico",0,0,0
 48271,"Kinney County","Texas",0,3157,0
 31163,"Sherman County","Nebraska",0,2967,0
 13213,"Murray County","Georgia",0,40562,0
@@ -151,7 +151,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 45023,"Chester County","South Carolina",18,32182,0.06
 48463,"Uvalde County","Texas",20,24881,0.08
 28079,"Leake County","Mississippi",0,21319,0
-72077,"Juncos Municipio","Puerto Rico",0,36829,0
+72077,"Juncos Municipio","Puerto Rico",0,0,0
 38041,"Hettinger County","North Dakota",0,2432,0
 51685,"Manassas Park city","Virginia",64,16798,0.38
 13125,"Glascock County","Georgia",0,2932,0
@@ -173,7 +173,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 48081,"Coke County","Texas",0,3353,0
 48125,"Dickens County","Texas",0,1747,0
 48089,"Colorado County","Texas",133,21006,0.63
-72057,"Guayama Municipio","Puerto Rico",0,35298,0
+72057,"Guayama Municipio","Puerto Rico",0,0,0
 46073,"Jerauld County","South Dakota",1,1772,0.06
 54105,"Wirt County","West Virginia",0,5053,0
 35011,"De Baca County","New Mexico",0,1576,0
@@ -196,7 +196,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 46015,"Brule County","South Dakota",0,5283,0
 16009,"Benewah County","Idaho",0,10142,0
 48195,"Hansford County","Texas",0,5119,0
-72069,"Humacao Municipio","Puerto Rico",0,50100,0
+72069,"Humacao Municipio","Puerto Rico",0,0,0
 19117,"Lucas County","Iowa",7,8716,0.08
 47007,"Bledsoe County","Tennessee",0,15032,0
 17103,"Lee County","Illinois",15,33869,0.04
@@ -379,9 +379,9 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 28069,"Kemper County","Mississippi",0,8729,0
 32027,"Pershing County","Nevada",0,6487,0
 32029,"Storey County","Nevada",4,4140,0.1
-72135,"Toa Alta Municipio","Puerto Rico",0,66320,0
-72015,"Arroyo Municipio","Puerto Rico",0,15341,0
-72149,"Villalba Municipio","Puerto Rico",0,21556,0
+72135,"Toa Alta Municipio","Puerto Rico",0,0,0
+72015,"Arroyo Municipio","Puerto Rico",0,0,0
+72149,"Villalba Municipio","Puerto Rico",0,0,0
 36103,"Suffolk County","New York",2193,1530146,0.14
 15009,"Maui County","Hawaii",23883,164522,14.52
 47141,"Putnam County","Tennessee",133,82558,0.16
@@ -404,8 +404,8 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 20167,"Russell County","Kansas",22,6679,0.33
 60030,"Rose Island","American Samoa",0,0,0
 60040,"Swains Island","American Samoa",0,0,0
-72121,"Sabana Grande Municipio","Puerto Rico",0,22407,0
-72009,"Aibonito Municipio","Puerto Rico",0,24636,0
+72121,"Sabana Grande Municipio","Puerto Rico",0,0,0
+72009,"Aibonito Municipio","Puerto Rico",0,0,0
 38019,"Cavalier County","North Dakota",0,3633,0
 18069,"Huntington County","Indiana",29,36798,0.08
 20087,"Jefferson County","Kansas",48,18349,0.26
@@ -460,7 +460,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 29229,"Wright County","Missouri",63,18965,0.33
 48059,"Callahan County","Texas",39,14241,0.27
 51595,"Emporia city","Virginia",0,5547,0
-72079,"Lajas Municipio","Puerto Rico",0,23035,0
+72079,"Lajas Municipio","Puerto Rico",0,0,0
 31183,"Wheeler County","Nebraska",0,847,0
 02150,"Kodiak Island Borough","Alaska",19,12771,0.15
 26069,"Iosco County","Michigan",30,25347,0.12
@@ -500,14 +500,14 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 37077,"Granville County","North Carolina",0,60877,0
 29075,"Gentry County","Missouri",18,6245,0.29
 48303,"Lubbock County","Texas",327,318884,0.1
-72005,"Aguadilla Municipio","Puerto Rico",0,54137,0
+72005,"Aguadilla Municipio","Puerto Rico",0,0,0
 51750,"Radford city","Virginia",35,16726,0.21
 30079,"Prairie County","Montana",34,1250,2.72
 54047,"McDowell County","West Virginia",0,17943,0
 12007,"Bradford County","Florida",6,27885,0.02
 12005,"Bay County","Florida",346,186393,0.19
-72045,"Comerío Municipio","Puerto Rico",0,18711,0
-72063,"Gurabo Municipio","Puerto Rico",0,40228,0
+72045,"Comerío Municipio","Puerto Rico",0,0,0
+72063,"Gurabo Municipio","Puerto Rico",0,0,0
 28031,"Covington County","Mississippi",0,18148,0
 05111,"Poinsett County","Arkansas",0,22543,0
 41009,"Columbia County","Oregon",564,53493,1.05
@@ -517,7 +517,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 28061,"Jasper County","Mississippi",0,16059,0
 46045,"Edmunds County","South Dakota",0,4048,0
 28039,"George County","Mississippi",91,25170,0.36
-72111,"Peñuelas Municipio","Puerto Rico",0,19853,0
+72111,"Peñuelas Municipio","Puerto Rico",0,0,0
 06071,"San Bernardino County","California",14031,2197104,0.64
 31179,"Wayne County","Nebraska",38,9844,0.39
 38045,"LaMoure County","North Dakota",0,4118,0
@@ -597,7 +597,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 39067,"Harrison County","Ohio",6,14306,0.04
 48335,"Mitchell County","Texas",0,9018,0
 55135,"Waupaca County","Wisconsin",75,51569,0.15
-72117,"Rincón Municipio","Puerto Rico",0,15378,0
+72117,"Rincón Municipio","Puerto Rico",0,0,0
 48145,"Falls County","Texas",116,17291,0.67
 48069,"Castro County","Texas",0,7344,0
 17019,"Champaign County","Illinois",974,208741,0.47
@@ -630,7 +630,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 13017,"Ben Hill County","Georgia",0,17089,0
 13071,"Colquitt County","Georgia",0,46224,0
 51580,"Covington city","Virginia",0,5680,0
-72133,"Santa Isabel Municipio","Puerto Rico",0,19903,0
+72133,"Santa Isabel Municipio","Puerto Rico",0,0,0
 13155,"Irwin County","Georgia",180,9285,1.94
 38027,"Eddy County","North Dakota",0,2307,0
 19197,"Wright County","Iowa",48,12791,0.38
@@ -647,7 +647,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 08003,"Alamosa County","Colorado",108,16581,0.65
 46049,"Faulk County","South Dakota",0,2126,0
 28037,"Franklin County","Mississippi",0,7622,0
-72081,"Lares Municipio","Puerto Rico",0,27855,0
+72081,"Lares Municipio","Puerto Rico",0,0,0
 01059,"Franklin County","Alabama",0,31966,0
 13069,"Coffee County","Georgia",72,43347,0.17
 48293,"Limestone County","Texas",0,22283,0
@@ -663,7 +663,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 36023,"Cortland County","New York",130,46246,0.28
 51113,"Madison County","Virginia",0,14044,0
 28105,"Oktibbeha County","Mississippi",12,51771,0.02
-72055,"Guánica Municipio","Puerto Rico",0,12855,0
+72055,"Guánica Municipio","Puerto Rico",0,0,0
 28161,"Yalobusha County","Mississippi",0,12419,0
 29085,"Hickory County","Missouri",8,8585,0.09
 56007,"Carbon County","Wyoming",37,14463,0.26
@@ -712,14 +712,14 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 12049,"Hardee County","Florida",0,25675,0
 17191,"Wayne County","Illinois",0,15973,0
 48319,"Mason County","Texas",0,3955,0
-72047,"Corozal Municipio","Puerto Rico",0,34444,0
+72047,"Corozal Municipio","Puerto Rico",0,0,0
 19185,"Wayne County","Iowa",0,6532,0
 28125,"Sharkey County","Mississippi",0,3872,0
 35028,"Los Alamos County","New Mexico",257,19435,1.32
 20131,"Nemaha County","Kansas",2,10160,0.02
 17107,"Logan County","Illinois",0,27713,0
 29065,"Dent County","Missouri",2,14539,0.01
-72033,"Cataño Municipio","Puerto Rico",0,22467,0
+72033,"Cataño Municipio","Puerto Rico",0,0,0
 20107,"Linn County","Kansas",0,9767,0
 48369,"Parmer County","Texas",0,9731,0
 29137,"Monroe County","Missouri",38,8734,0.44
@@ -757,7 +757,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 40083,"Logan County","Oklahoma",25,51938,0.05
 40005,"Atoka County","Oklahoma",82,14379,0.57
 29049,"Clinton County","Missouri",17,21414,0.08
-72089,"Luquillo Municipio","Puerto Rico",0,17532,0
+72089,"Luquillo Municipio","Puerto Rico",0,0,0
 05051,"Garland County","Arkansas",126,100035,0.13
 19101,"Jefferson County","Iowa",9,15705,0.06
 28099,"Neshoba County","Mississippi",0,28932,0
@@ -777,15 +777,15 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 48327,"Menard County","Texas",0,1955,0
 20035,"Cowley County","Kansas",29,34411,0.08
 21113,"Jessamine County","Kentucky",44,54588,0.08
-72059,"Guayanilla Municipio","Puerto Rico",0,17141,0
+72059,"Guayanilla Municipio","Puerto Rico",0,0,0
 17027,"Clinton County","Illinois",44,36954,0.12
-72067,"Hormigueros Municipio","Puerto Rico",0,15441,0
+72067,"Hormigueros Municipio","Puerto Rico",0,0,0
 38087,"Slope County","North Dakota",0,766,0
 18143,"Scott County","Indiana",119,24526,0.49
 23003,"Aroostook County","Maine",183,67058,0.27
 26113,"Missaukee County","Michigan",38,15207,0.25
 54017,"Doddridge County","West Virginia",0,7711,0
-72027,"Camuy Municipio","Puerto Rico",0,32734,0
+72027,"Camuy Municipio","Puerto Rico",0,0,0
 28041,"Greene County","Mississippi",0,13615,0
 18007,"Benton County","Indiana",0,8735,0
 48255,"Karnes County","Texas",64,14968,0.43
@@ -864,7 +864,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 48033,"Borden County","Texas",0,713,0
 48313,"Madison County","Texas",0,13648,0
 19055,"Delaware County","Iowa",0,17558,0
-72093,"Maricao Municipio","Puerto Rico",12,4988,0.24
+72093,"Maricao Municipio","Puerto Rico",0,0,0
 29061,"Daviess County","Missouri",0,8477,0
 06085,"Santa Clara County","California",38237,1902047,2.01
 08085,"Montrose County","Colorado",182,43807,0.42
@@ -896,7 +896,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 31053,"Dodge County","Nebraska",82,37351,0.22
 18133,"Putnam County","Indiana",104,37280,0.28
 48461,"Upton County","Texas",0,3191,0
-72049,"Culebra Municipio","Puerto Rico",0,1387,0
+72049,"Culebra Municipio","Puerto Rico",0,0,0
 18023,"Clinton County","Indiana",2,32944,0.01
 47025,"Claiborne County","Tennessee",40,32466,0.12
 28119,"Quitman County","Mississippi",0,5774,0
@@ -938,9 +938,9 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 47133,"Overton County","Tennessee",0,23065,0
 55081,"Monroe County","Wisconsin",6,46208,0.01
 56025,"Natrona County","Wyoming",459,79977,0.57
-72109,"Patillas Municipio","Puerto Rico",0,15563,0
-72039,"Ciales Municipio","Puerto Rico",0,16805,0
-72147,"Vieques Municipio","Puerto Rico",0,8078,0
+72109,"Patillas Municipio","Puerto Rico",0,0,0
+72039,"Ciales Municipio","Puerto Rico",0,0,0
+72147,"Vieques Municipio","Puerto Rico",0,0,0
 41069,"Wheeler County","Oregon",0,1485,0
 48473,"Waller County","Texas",28,61552,0.05
 48157,"Fort Bend County","Texas",1912,893767,0.21
@@ -1007,7 +1007,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 51167,"Russell County","Virginia",6,25538,0.02
 53065,"Stevens County","Washington",234,48067,0.49
 55011,"Buffalo County","Wisconsin",9,13393,0.07
-72013,"Arecibo Municipio","Puerto Rico",0,86467,0
+72013,"Arecibo Municipio","Puerto Rico",0,0,0
 40059,"Harper County","Oklahoma",0,3203,0
 48421,"Sherman County","Texas",0,2295,0
 49019,"Grand County","Utah",0,9754,0
@@ -1329,7 +1329,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 18045,"Fountain County","Indiana",0,16617,0
 19095,"Iowa County","Iowa",19,16507,0.12
 16013,"Blaine County","Idaho",92,24951,0.37
-72151,"Yabucoa Municipio","Puerto Rico",0,29400,0
+72151,"Yabucoa Municipio","Puerto Rico",0,0,0
 48439,"Tarrant County","Texas",5908,2167390,0.27
 47045,"Dyer County","Tennessee",43,36508,0.12
 37093,"Hoke County","North Carolina",189,53835,0.35
@@ -1400,10 +1400,10 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 45015,"Berkeley County","South Carolina",627,246802,0.25
 55027,"Dodge County","Wisconsin",144,88742,0.16
 55141,"Wood County","Wisconsin",236,74004,0.32
-72105,"Naranjito Municipio","Puerto Rico",0,29310,0
-72073,"Jayuya Municipio","Puerto Rico",0,14566,0
+72105,"Naranjito Municipio","Puerto Rico",0,0,0
+72073,"Jayuya Municipio","Puerto Rico",0,0,0
 40003,"Alfalfa County","Oklahoma",0,5696,0
-72095,"Maunabo Municipio","Puerto Rico",0,10399,0
+72095,"Maunabo Municipio","Puerto Rico",0,0,0
 31149,"Rock County","Nebraska",0,1319,0
 31125,"Nance County","Nebraska",2,3324,0.06
 08075,"Logan County","Colorado",57,20892,0.27
@@ -1436,7 +1436,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 54081,"Raleigh County","West Virginia",66,73195,0.09
 55139,"Winnebago County","Wisconsin",221,171769,0.13
 69120,"Tinian Municipality","Commonwealth of the Northern Mariana Islands",0,0,0
-72087,"Loíza Municipio","Puerto Rico",20,22768,0.09
+72087,"Loíza Municipio","Puerto Rico",0,0,0
 37107,"Lenoir County","North Carolina",63,54919,0.11
 38059,"Morton County","North Dakota",71,33777,0.21
 39137,"Putnam County","Ohio",45,34314,0.13
@@ -1450,7 +1450,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 51680,"Lynchburg city","Virginia",377,79497,0.47
 51101,"King William County","Virginia",0,18593,0
 55113,"Sawyer County","Wisconsin",6,18476,0.03
-72139,"Trujillo Alto Municipio","Puerto Rico",0,67088,0
+72139,"Trujillo Alto Municipio","Puerto Rico",0,0,0
 39163,"Vinton County","Ohio",0,12630,0
 06007,"Butte County","California",1404,207929,0.68
 23017,"Oxford County","Maine",86,59255,0.15
@@ -1461,7 +1461,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 46021,"Campbell County","South Dakota",0,1593,0
 47099,"Lawrence County","Tennessee",16,45385,0.04
 48315,"Marion County","Texas",9,9737,0.09
-72037,"Ceiba Municipio","Puerto Rico",0,10995,0
+72037,"Ceiba Municipio","Puerto Rico",0,0,0
 48121,"Denton County","Texas",3737,979561,0.38
 48025,"Bee County","Texas",30,31083,0.1
 48497,"Wise County","Texas",106,75005,0.14
@@ -1521,8 +1521,8 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 23027,"Waldo County","Maine",22,40192,0.05
 51775,"Salem city","Virginia",25,25618,0.1
 29227,"Worth County","Missouri",0,1934,0
-72153,"Yauco Municipio","Puerto Rico",0,32993,0
-72099,"Moca Municipio","Puerto Rico",11,37424,0.03
+72153,"Yauco Municipio","Puerto Rico",0,0,0
+72099,"Moca Municipio","Puerto Rico",0,0,0
 37011,"Avery County","North Carolina",30,17680,0.17
 48333,"Mills County","Texas",20,4511,0.44
 51640,"Galax city","Virginia",5,6726,0.07
@@ -1620,7 +1620,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 53037,"Kittitas County","Washington",416,47172,0.88
 54049,"Marion County","West Virginia",168,55909,0.3
 32011,"Eureka County","Nevada",0,1585,0
-72127,"San Juan Municipio","Puerto Rico",60,336160,0.02
+72127,"San Juan Municipio","Puerto Rico",0,0,0
 40093,"Major County","Oklahoma",23,7628,0.3
 45081,"Saluda County","South Carolina",6,19131,0.03
 13121,"Fulton County","Georgia",4134,1076561,0.38
@@ -1741,7 +1741,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 48489,"Willacy County","Texas",0,20139,0
 54067,"Nicholas County","West Virginia",45,24277,0.19
 55119,"Taylor County","Wisconsin",33,20024,0.16
-72011,"Añasco Municipio","Puerto Rico",0,25094,0
+72011,"Añasco Municipio","Puerto Rico",0,0,0
 54091,"Taylor County","West Virginia",15,16487,0.09
 54103,"Wetzel County","West Virginia",6,14078,0.04
 39051,"Fulton County","Ohio",17,42240,0.04
@@ -1761,13 +1761,13 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 01077,"Lauderdale County","Alabama",191,95830,0.2
 06111,"Ventura County","California",9897,837469,1.18
 12023,"Columbia County","Florida",33,71789,0.05
-72001,"Adjuntas Municipio","Puerto Rico",0,17960,0
-72007,"Aguas Buenas Municipio","Puerto Rico",0,23614,0
-72061,"Guaynabo Municipio","Puerto Rico",0,89378,0
+72001,"Adjuntas Municipio","Puerto Rico",0,0,0
+72007,"Aguas Buenas Municipio","Puerto Rico",0,0,0
+72061,"Guaynabo Municipio","Puerto Rico",0,0,0
 54019,"Fayette County","West Virginia",0,39519,0
-72029,"Canóvanas Municipio","Puerto Rico",0,41816,0
-72041,"Cidra Municipio","Puerto Rico",0,39643,0
-72043,"Coamo Municipio","Puerto Rico",0,33998,0
+72029,"Canóvanas Municipio","Puerto Rico",0,0,0
+72041,"Cidra Municipio","Puerto Rico",0,0,0
+72043,"Coamo Municipio","Puerto Rico",0,0,0
 55043,"Grant County","Wisconsin",45,51770,0.09
 51131,"Northampton County","Virginia",0,12059,0
 36049,"Lewis County","New York",1,26607,0
@@ -1779,7 +1779,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 01085,"Lowndes County","Alabama",0,9833,0
 04021,"Pinal County","Arizona",1451,469006,0.31
 20011,"Bourbon County","Kansas",32,14394,0.22
-72065,"Hatillo Municipio","Puerto Rico",0,38157,0
+72065,"Hatillo Municipio","Puerto Rico",0,0,0
 31065,"Furnas County","Nebraska",2,4568,0.04
 26079,"Kalkaska County","Michigan",0,18239,0
 01115,"St. Clair County","Alabama",182,94166,0.19
@@ -1872,8 +1872,8 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 39095,"Lucas County","Ohio",644,428018,0.15
 12073,"Leon County","Florida",925,297542,0.31
 28047,"Harrison County","Mississippi",951,210891,0.45
-72071,"Isabela Municipio","Puerto Rico",0,42890,0
-72083,"Las Marías Municipio","Puerto Rico",0,8744,0
+72071,"Isabela Municipio","Puerto Rico",0,0,0
+72083,"Las Marías Municipio","Puerto Rico",0,0,0
 54075,"Pocahontas County","West Virginia",0,7784,0
 18135,"Randolph County","Indiana",9,24387,0.04
 29179,"Reynolds County","Missouri",14,6010,0.23
@@ -2021,12 +2021,12 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 53043,"Lincoln County","Washington",21,11489,0.18
 35001,"Bernalillo County","New Mexico",2943,673930,0.44
 35061,"Valencia County","New Mexico",160,78458,0.2
-72145,"Vega Baja Municipio","Puerto Rico",0,53892,0
+72145,"Vega Baja Municipio","Puerto Rico",0,0,0
 36009,"Cattaraugus County","New York",64,76145,0.08
-72137,"Toa Baja Municipio","Puerto Rico",10,73039,0.01
+72137,"Toa Baja Municipio","Puerto Rico",0,0,0
 12125,"Union County","Florida",3,15701,0.02
 17057,"Fulton County","Illinois",30,33020,0.09
-72143,"Vega Alta Municipio","Puerto Rico",0,34921,0
+72143,"Vega Alta Municipio","Puerto Rico",0,0,0
 19133,"Monona County","Iowa",0,8557,0
 20043,"Doniphan County","Kansas",9,7503,0.12
 13265,"Taliaferro County","Georgia",22,1558,1.41
@@ -2140,7 +2140,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 48471,"Walker County","Texas",133,80209,0.17
 51810,"Virginia Beach city","Virginia",2297,456349,0.5
 48307,"McCulloch County","Texas",0,7514,0
-72123,"Salinas Municipio","Puerto Rico",0,25079,0
+72123,"Salinas Municipio","Puerto Rico",0,0,0
 26163,"Wayne County","Michigan",3349,1772259,0.19
 51053,"Dinwiddie County","Virginia",57,28191,0.2
 20181,"Sherman County","Kansas",0,5858,0
@@ -2180,9 +2180,9 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 39009,"Athens County","Ohio",135,61737,0.22
 22057,"Lafourche Parish","Louisiana",37,96252,0.04
 26047,"Emmet County","Michigan",25,34125,0.07
-72125,"San Germán Municipio","Puerto Rico",0,31305,0
+72125,"San Germán Municipio","Puerto Rico",0,0,0
 37185,"Warren County","North Carolina",3,18795,0.02
-72053,"Fajardo Municipio","Puerto Rico",0,31489,0
+72053,"Fajardo Municipio","Puerto Rico",0,0,0
 17089,"Kane County","Illinois",1463,517255,0.28
 16085,"Valley County","Idaho",6,12389,0.05
 51083,"Halifax County","Virginia",9,33639,0.03
@@ -2197,7 +2197,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 01065,"Hale County","Alabama",0,14829,0
 69085,"Northern Islands Municipality","Commonwealth of the Northern Mariana Islands",0,0,0
 69110,"Saipan Municipality","Commonwealth of the Northern Mariana Islands",0,0,0
-72113,"Ponce Municipio","Puerto Rico",0,132760,0
+72113,"Ponce Municipio","Puerto Rico",0,0,0
 30005,"Blaine County","Montana",0,6949,0
 38033,"Golden Valley County","North Dakota",0,1653,0
 55017,"Chippewa County","Wisconsin",111,66799,0.17
@@ -2347,7 +2347,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 38005,"Benson County","North Dakota",2,5808,0.03
 22109,"Terrebonne Parish","Louisiana",75,106186,0.07
 01029,"Cleburne County","Alabama",16,15426,0.1
-72003,"Aguada Municipio","Puerto Rico",0,37758,0
+72003,"Aguada Municipio","Puerto Rico",0,0,0
 29013,"Bates County","Missouri",6,16186,0.04
 22059,"LaSalle Parish","Louisiana",0,14789,0
 46123,"Tripp County","South Dakota",0,5611,0
@@ -2426,10 +2426,10 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 29211,"Sullivan County","Missouri",0,5857,0
 54107,"Wood County","West Virginia",19,83407,0.02
 54015,"Clay County","West Virginia",68,7835,0.87
-72054,"Florida Municipio","Puerto Rico",0,11532,0
+72054,"Florida Municipio","Puerto Rico",0,0,0
 36115,"Washington County","New York",175,60522,0.29
 54027,"Hampshire County","West Virginia",0,23465,0
-72025,"Caguas Municipio","Puerto Rico",0,125586,0
+72025,"Caguas Municipio","Puerto Rico",0,0,0
 17119,"Madison County","Illinois",361,264238,0.14
 16087,"Washington County","Idaho",61,11142,0.55
 47137,"Pickett County","Tennessee",0,5079,0
@@ -2443,7 +2443,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 12117,"Seminole County","Florida",1020,481470,0.21
 54005,"Boone County","West Virginia",6,21026,0.03
 54035,"Jackson County","West Virginia",68,27705,0.25
-72031,"Carolina Municipio","Puerto Rico",0,152204,0
+72031,"Carolina Municipio","Puerto Rico",0,0,0
 01079,"Lawrence County","Alabama",39,33276,0.12
 05035,"Crittenden County","Arkansas",6,47266,0.01
 06025,"Imperial County","California",472,180202,0.26
@@ -2513,7 +2513,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 39007,"Ashtabula County","Ohio",84,97167,0.09
 31063,"Frontier County","Nebraska",0,2569,0
 26013,"Baraga County","Michigan",1,8191,0.01
-72129,"San Lorenzo Municipio","Puerto Rico",0,37431,0
+72129,"San Lorenzo Municipio","Puerto Rico",0,0,0
 04019,"Pima County","Arizona",5106,1060490,0.48
 18043,"Floyd County","Indiana",97,80918,0.12
 53021,"Franklin County","Washington",379,98902,0.38
@@ -2657,7 +2657,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 48355,"Nueces County","Texas",532,352955,0.15
 48469,"Victoria County","Texas",119,91413,0.13
 29139,"Montgomery County","Missouri",0,11426,0
-72021,"Bayamón Municipio","Puerto Rico",23,182469,0.01
+72021,"Bayamón Municipio","Puerto Rico",0,0,0
 51007,"Amelia County","Virginia",0,13462,0
 12065,"Jefferson County","Florida",43,15091,0.28
 22087,"St. Bernard Parish","Louisiana",27,44419,0.06
@@ -2769,15 +2769,15 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 06097,"Sonoma County","California",3019,485040,0.62
 22035,"East Carroll Parish","Louisiana",0,7072,0
 13275,"Thomas County","Georgia",40,45777,0.09
-72017,"Barceloneta Municipio","Puerto Rico",0,22494,0
+72017,"Barceloneta Municipio","Puerto Rico",0,0,0
 28005,"Amite County","Mississippi",0,12565,0
 46075,"Jones County","South Dakota",0,1004,0
 51017,"Bath County","Virginia",0,4100,0
 04003,"Cochise County","Arizona",673,125566,0.54
 53077,"Yakima County","Washington",657,257152,0.26
 55073,"Marathon County","Wisconsin",112,138403,0.08
-72097,"Mayagüez Municipio","Puerto Rico",0,70828,0
-72023,"Cabo Rojo Municipio","Puerto Rico",0,46876,0
+72097,"Mayagüez Municipio","Puerto Rico",0,0,0
+72023,"Cabo Rojo Municipio","Puerto Rico",0,0,0
 46043,"Douglas County","South Dakota",15,2828,0.53
 47015,"Cannon County","Tennessee",70,14818,0.47
 01111,"Randolph County","Alabama",9,22510,0.04
@@ -2788,8 +2788,8 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 28021,"Claiborne County","Mississippi",56,8582,0.65
 28033,"DeSoto County","Mississippi",384,191301,0.2
 13131,"Grady County","Georgia",0,26108,0
-72119,"Río Grande Municipio","Puerto Rico",0,46051,0
-72085,"Las Piedras Municipio","Puerto Rico",0,34951,0
+72119,"Río Grande Municipio","Puerto Rico",0,0,0
+72085,"Las Piedras Municipio","Puerto Rico",0,0,0
 54109,"Wyoming County","West Virginia",0,20629,0
 05041,"Desha County","Arkansas",0,10786,0
 34027,"Morris County","New Jersey",1491,514528,0.29
@@ -2827,7 +2827,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 31047,"Dawson County","Nebraska",47,24202,0.19
 38053,"McKenzie County","North Dakota",8,14321,0.06
 45001,"Abbeville County","South Carolina",5,24420,0.02
-72115,"Quebradillas Municipio","Puerto Rico",0,23409,0
+72115,"Quebradillas Municipio","Puerto Rico",0,0,0
 08103,"Rio Blanco County","Colorado",9,6544,0.14
 18151,"Steuben County","Indiana",0,34726,0
 29021,"Buchanan County","Missouri",366,83568,0.44
@@ -2928,7 +2928,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 51161,"Roanoke County","Virginia",216,97023,0.22
 51195,"Wise County","Virginia",103,35448,0.29
 56039,"Teton County","Wyoming",35,23396,0.15
-72107,"Orocovis Municipio","Puerto Rico",0,21309,0
+72107,"Orocovis Municipio","Puerto Rico",0,0,0
 35033,"Mora County","New Mexico",0,4149,0
 46095,"Mellette County","South Dakota",0,1943,0
 29047,"Clay County","Missouri",725,258122,0.28
@@ -2939,7 +2939,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 12123,"Taylor County","Florida",7,21503,0.03
 53009,"Clallam County","Washington",570,77813,0.73
 54025,"Greenbrier County","West Virginia",27,32386,0.08
-72035,"Cayey Municipio","Puerto Rico",0,40917,0
+72035,"Cayey Municipio","Puerto Rico",0,0,0
 35007,"Colfax County","New Mexico",39,12322,0.32
 49001,"Beaver County","Utah",0,7273,0
 01019,"Cherokee County","Alabama",0,25443,0
@@ -3178,7 +3178,7 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 37013,"Beaufort County","North Carolina",8,44499,0.02
 47001,"Anderson County","Tennessee",223,79153,0.28
 51011,"Appomattox County","Virginia",59,16610,0.36
-72103,"Naguabo Municipio","Puerto Rico",0,23054,0
+72103,"Naguabo Municipio","Puerto Rico",0,0,0
 47119,"Maury County","Tennessee",110,107791,0.1
 40151,"Woods County","Oklahoma",5,8596,0.06
 31155,"Saunders County","Nebraska",12,23048,0.05
@@ -3217,9 +3217,9 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 27007,"Beltrami County","Minnesota",57,46512,0.12
 51015,"Augusta County","Virginia",117,78033,0.15
 51071,"Giles County","Virginia",0,16557,0
-72051,"Dorado Municipio","Puerto Rico",0,35810,0
+72051,"Dorado Municipio","Puerto Rico",0,0,0
 12095,"Orange County","Florida",4160,1471937,0.28
-72141,"Utuado Municipio","Puerto Rico",0,27621,0
+72141,"Utuado Municipio","Puerto Rico",0,0,0
 30053,"Lincoln County","Montana",37,21175,0.17
 51051,"Dickenson County","Virginia",0,13733,0
 39153,"Summit County","Ohio",873,537864,0.16
@@ -3232,5 +3232,5 @@ fips,name,state,japanese_pop,total_pop,japanese_pct
 21191,"Pendleton County","Kentucky",0,14723,0
 20209,"Wyandotte County","Kansas",87,167654,0.05
 56043,"Washakie County","Wyoming",12,7703,0.16
-72131,"San Sebastián Municipio","Puerto Rico",0,39088,0
+72131,"San Sebastián Municipio","Puerto Rico",0,0,0
 32031,"Washoe County","Nevada",3449,497200,0.69
