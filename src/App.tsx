@@ -136,7 +136,7 @@ export default function App() {
           zoom: 4.3,
         }}
         minZoom={3.5}
-        maxZoom={11}
+        maxZoom={12}
         mapStyle="mapbox://styles/daigofuji/cmp6zmu4j004f01s818jy6thz"
         onLoad={onLoad}
       >

@@ -14,15 +14,32 @@ export default function InfoPanel() {
         <button
           type="button"
           onClick={() => setMinimized((v) => !v)}
-          className="ml-4 text-gray-400 hover:text-gray-700 text-xs leading-none"
+          className="ml-4 text-xs text-gray-400 hover:text-gray-900 text-xs leading-none"
           aria-label={minimized ? "Expand" : "Minimize"}
         >
-          {minimized ? "▲" : "▼"}
+          {minimized ? "INFO" : "CLOSE"}
         </button>
       </div>
 
       {!minimized && (
         <div className="px-4 pb-4 text-xs text-gray-600 space-y-2 border-t border-gray-100 pt-3">
+          <div>
+            <div className="flex justify-between text-gray-800 mt-0.5">
+              Percent of total population:
+            </div>
+            <div
+              className="h-3 w-full"
+              style={{
+                background:
+                  "linear-gradient(to right, #efedf5, #bcbddc, #756bb1,  #1b021d, #bd001c)",
+              }}
+            />
+            <div className="flex justify-between text-[10px] text-gray-400 mt-0.5 uppercase tracking-wider">
+              <span>Low</span>
+              <span>High</span>
+            </div>
+          </div>
+
           <p className="leading-relaxed">
             According to the{" "}
             <a
@@ -31,7 +48,7 @@ export default function InfoPanel() {
               className="underline hover:text-black"
               href="https://www.census.gov/programs-surveys/acs.html"
             >
-              2024 American Community Survey
+              Census 2024 American Community Survey
             </a>{" "}
             (ACS), there were{" "}
             <span className="font-semibold text-gray-800">
