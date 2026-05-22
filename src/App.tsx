@@ -1,5 +1,5 @@
 import mapboxgl from "mapbox-gl";
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, useState } from "react";
 import MapGL, { NavigationControl, ScaleControl } from "react-map-gl/mapbox";
 import type { MapRef } from "react-map-gl/mapbox";
 import InfoPanel from "./InfoPanel";
@@ -53,6 +53,14 @@ function popupHTML({
 
 export default function App() {
   const mapRef = useRef<MapRef>(null);
+  const [infoPanelOpen, setInfoPanelOpen] = useState(true);
+  const autoCollapsedRef = useRef(false);
+  const collapseOnceRef = useRef(() => {
+    if (!autoCollapsedRef.current) {
+      autoCollapsedRef.current = true;
+      setInfoPanelOpen(false);
+    }
+  });
 
   const onLoad = useCallback(() => {
     const map = mapRef.current?.getMap();
@@ -96,6 +104,7 @@ export default function App() {
       [TRACT_LAYER, TRACT_SELECTED, COUNTY_SELECTED],
     ]) {
       map.on("click", layerId, (e) => {
+        collapseOnceRef.current();
         const feature = e.features?.[0];
         if (!feature) return;
         const props = feature.properties as FeatureProps;
@@ -111,6 +120,11 @@ export default function App() {
         map.getCanvas().style.cursor = "";
       });
     }
+
+    // Any drag/zoom collapses the info panel once
+    map.on("movestart", (e) => {
+      if (e.originalEvent) collapseOnceRef.current();
+    });
 
     // Click outside both layers → close popup (close handler clears selection)
     map.on("click", (e) => {
@@ -143,7 +157,10 @@ export default function App() {
         <NavigationControl position="top-right" />
         <ScaleControl unit="imperial" position="bottom-right" />
       </MapGL>
-      <InfoPanel />
+      <InfoPanel
+        open={infoPanelOpen}
+        onToggle={() => setInfoPanelOpen((v) => !v)}
+      />
     </div>
   );
 }

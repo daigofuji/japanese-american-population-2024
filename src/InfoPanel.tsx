@@ -1,8 +1,9 @@
-import { useState } from "react";
+type Props = {
+  open: boolean;
+  onToggle: () => void;
+};
 
-export default function InfoPanel() {
-  const [minimized, setMinimized] = useState(true);
-
+export default function InfoPanel({ open, onToggle }: Props) {
   return (
     <div className="absolute top-4 left-4 z-10 bg-white/95 shadow-md w-72 text-gray-800">
       <div className="flex items-center justify-between px-4 py-3">
@@ -13,15 +14,19 @@ export default function InfoPanel() {
         </h1>
         <button
           type="button"
-          onClick={() => setMinimized((v) => !v)}
-          className="ml-4 text-xs text-gray-400 hover:text-gray-900 text-xs leading-none"
-          aria-label={minimized ? "Expand" : "Minimize"}
+          onClick={onToggle}
+          className="ml-4 text-xs text-gray-400 hover:text-gray-900 leading-none"
+          aria-label={open ? "Minimize" : "Expand"}
         >
-          {minimized ? "INFO" : "CLOSE"}
+          {open ? "CLOSE" : "INFO"}
         </button>
       </div>
 
-      {!minimized && (
+      <div
+        className={`overflow-hidden transition-all duration-500 ease-in-out ${
+          open ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
         <div className="px-4 pb-4 text-xs text-gray-600 space-y-2 border-t border-gray-100 pt-3">
           <div>
             <div className="flex justify-between text-gray-800 mt-0.5">
@@ -88,7 +93,7 @@ export default function InfoPanel() {
             Donate / Join JACL
           </a>
         </div>
-      )}
+      </div>
     </div>
   );
 }

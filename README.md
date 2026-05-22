@@ -10,8 +10,7 @@ Interactive county-level choropleth mapping people of Japanese descent across th
 - **Mapbox GL JS** via `react-map-gl`
 - **Biome** — lint + format
 - **GitHub Pages** — auto-deploy via GitHub Actions
-- colors: #efedf5 #bcbddc #756bb1
-
+- colors: #efedf5 #bcbddc #756bb1  #1b021d #bd001c
 ---
 
 ## Data
