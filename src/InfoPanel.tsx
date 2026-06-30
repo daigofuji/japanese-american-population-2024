@@ -1,3 +1,36 @@
+import { useState } from "react";
+
+const SHARE_URL =
+  "https://pacificcitizen.org/interactives/japanese-american-population/";
+const SHARE_TEXT =
+  "1.68 million Japanese Americans — explore where they live, county by county. Interactive map by @JACL_National";
+
+function ShareButton() {
+  const [copied, setCopied] = useState(false);
+  const canNativeShare = typeof navigator !== "undefined" && !!navigator.share;
+
+  function handleClick() {
+    if (canNativeShare) {
+      navigator.share({ title: "Japanese American Population Map", text: SHARE_TEXT, url: SHARE_URL });
+    } else {
+      navigator.clipboard.writeText(SHARE_URL).then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      });
+    }
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={handleClick}
+      className="flex-1 text-center border border-gray-300 hover:border-gray-600 text-gray-600 hover:text-gray-900 text-xs font-semibold uppercase tracking-widest py-2 transition-colors"
+    >
+      {copied ? "Copied!" : "Share"}
+    </button>
+  );
+}
+
 type Props = {
   open: boolean;
   onToggle: () => void;
@@ -46,30 +79,26 @@ export default function InfoPanel({ open, onToggle }: Props) {
           </div>
 
           <p className="leading-relaxed">
-            According to the{" "}
+            The{" "}
             <a
               target="_blank"
               rel="noopener noreferrer"
               className="underline hover:text-black"
               href="https://www.census.gov/programs-surveys/acs.html"
             >
-              Census 2024 American Community Survey
+              2024 American Community Survey
             </a>{" "}
-            (ACS), there were{" "}
+            counted{" "}
             <span className="font-semibold text-gray-800">
               1,680,520 Japanese Americans
             </span>{" "}
-            in the United States — about{" "}
+            — about{" "}
             <span className="font-semibold text-gray-800">0.5%</span> of the
-            total population of 338,156,808.
+            U.S. population — including those who identify as Japanese alone or
+            in combination with one or more other racial and ethnic groups. ACS
+            figures are estimates based on sample data.
           </p>
-          <p className="leading-relaxed">
-            Japanese Americans here includes people who self-identified as
-            Japanese alone, or Japanese in combination with one or more other
-            racial and ethnic groups. ACS figures are estimates based on sample
-            data.
-          </p>
-          <p className="mt-2 leading-relaxed text-gray-500">
+          <p className="leading-relaxed text-gray-500">
             Source:{" "}
             <a
               href="https://data.census.gov/table/ACSDT5Y2024.B02018"
@@ -77,21 +106,23 @@ export default function InfoPanel({ open, onToggle }: Props) {
               rel="noopener noreferrer"
               className="underline hover:text-black"
             >
-              2021-2024 US Census ACS 5-Year Estimates, Table B02018
+              2021-24 ACS 5-Yr Est. Table B02018
             </a>
           </p>
           <p className="leading-relaxed text-gray-500">
-            Daigo Fujiwara-Smith for Pacific Citizen/JACL. Originally published
-            May 2026.
+            By Daigo Fujiwara-Smith for Pacific Citizen/JACL, June 2026.
           </p>
-          <a
-            href="https://login.jacl.org/general/register_member_type.asp"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 block w-full text-center bg-red-700 hover:bg-red-800 text-white text-xs font-semibold uppercase tracking-widest py-2 px-3 transition-colors"
-          >
-            Donate / Join JACL
-          </a>
+          <div className="flex gap-2 pt-1">
+            <ShareButton />
+            <a
+              href="https://login.jacl.org/general/register_member_type.asp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-center bg-red-700 hover:bg-red-800 text-white text-xs font-semibold uppercase tracking-widest py-2 px-3 transition-colors"
+            >
+              Donate / Join
+            </a>
+          </div>
         </div>
       </div>
     </div>
