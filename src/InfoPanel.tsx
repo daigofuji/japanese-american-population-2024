@@ -41,9 +41,7 @@ export default function InfoPanel({ open, onToggle }: Props) {
     <div className="absolute top-4 left-4 z-10 bg-white/95 shadow-md w-72 text-gray-800">
       <div className="flex items-center justify-between px-4 py-3">
         <h1 className="font-bold text-sm uppercase tracking-widest leading-tight">
-          Japanese American
-          <br />
-          Population 2024
+          Japanese American Population
         </h1>
         <button
           type="button"
@@ -96,7 +94,7 @@ export default function InfoPanel({ open, onToggle }: Props) {
             <span className="font-semibold text-gray-800">0.5%</span> of the
             U.S. population — including those who identify as Japanese alone or
             in combination with one or more other racial and ethnic groups. ACS
-            figures are estimates based on sample data.
+            figures are estimates based on sample data. Published: June 2026.
           </p>
           <p className="leading-relaxed text-gray-500">
             Source:{" "}
@@ -106,12 +104,15 @@ export default function InfoPanel({ open, onToggle }: Props) {
               rel="noopener noreferrer"
               className="underline hover:text-black"
             >
-              2021-24 ACS 5-Yr Est. Table B02018
+              2020-24 ACS 5-Yr Est. Table B02018
             </a>
           </p>
           <p className="leading-relaxed text-gray-500">
-            By Daigo Fujiwara-Smith for Pacific Citizen/JACL, June 2026.
+            By Daigo Fujiwara-Smith for Pacific Citizen
           </p>
+          <a href="https://pacificcitizen.org/" target="_blank" rel="noopener noreferrer" className="">
+            <img src="./images/pc-logo.png" alt="Pacific Citizen logo" className="w-100 mt-2" />
+          </a>
           <div className="flex gap-2 pt-1">
             <ShareButton />
             <a
